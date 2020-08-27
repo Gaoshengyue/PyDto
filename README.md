@@ -56,3 +56,4 @@ class Test(PyDtoBase):
     # updated_at :datetime
 ```
 兼容查询结构是List或者单个对象，只需要在结构中定义好List或者单个对象的对象结构即可
+其他使用方法同上
