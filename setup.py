@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 with open("README.md") as f:
     long_description=f.read()
@@ -7,7 +7,7 @@ setup(
     packages=["PyDto"],
     version="0.1.10",
     long_description=long_description,
-    long_description_content_type="text/plain",
+    long_description_content_type="text/markdown",
     author="Symoon",
     author_email="symoon.gao@gmail.com",
     url="https://github.com/Gaoshengyue/PyDto",
