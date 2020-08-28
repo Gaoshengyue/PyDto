@@ -3,8 +3,9 @@ class PyDtoBase():
 
     def __init__(self, obj: object, data_mode=None, deep_keep_alive=3):
         """
-        :data_mode:sqlalchemy，默认为None，sqlalchemy模式下启动解析schema结构
+        :param data_mode:sqlalchemy，默认为None，sqlalchemy模式下启动解析schema结构
         :param obj: 传递需要进行数据结构筛选的对象
+        :param deep_keep_alive:计算深度
         """
         self.obj_demo = obj
         self.data_mode = data_mode
@@ -75,10 +76,15 @@ class PyDtoBase():
                     else:
                         # print(key_name)
                         result[key_name] = self.todict(obj.__getattribute__(key_name))
-                elif type(obj.__getattribute__(key_name)) ==bool:
-                    result[key_name]=False
+                elif type(obj.__getattribute__(key_name)) == bool:
+                    result[key_name] = False
+
+                elif type(obj.__getattribute__(key_name)) == int:
+                    result[key_name] = 0
+                elif type(obj.__getattribute__(key_name)) == str:
+                    result[key_name] = ''
                 else:
-                    result[key_name]=None
+                    result[key_name] = None
 
         elif hasattr(obj, "__iter__") and type(obj) not in [str, int, float, dict]:
             result = []
@@ -94,6 +100,11 @@ class PyDtoBase():
 
                     elif type(item.__getattribute__(key_name)) == bool:
                         s_r_dict[key_name] = False
+
+                    elif type(item.__getattribute__(key_name)) == int:
+                        s_r_dict[key_name] = 0
+                    elif type(item.__getattribute__(key_name)) == str:
+                        s_r_dict[key_name] = ''
                     else:
                         s_r_dict[key_name] = None
 
@@ -105,6 +116,11 @@ class PyDtoBase():
                     result[key_name] = k_type(obj.get(key_name))
                 elif type(obj.get(key_name)) == bool:
                     result[key_name] = False
+
+                elif type(obj.get(key_name)) == int:
+                    result[key_name] = 0
+                elif type(obj.get(key_name)) == str:
+                    result[key_name] = ''
                 else:
                     result[key_name] = None
 

@@ -5,13 +5,13 @@ with open("README.md",encoding="utf-8") as f:
 setup(
     name="python-dto",
     packages=["PyDto"],
-    version="0.2.2",
+    version="0.2.3",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Symoon",
     author_email="symoon.gao@gmail.com",
     url="https://github.com/Gaoshengyue/PyDto",
-    download_url="https://github.com/Gaoshengyue/PyDto/releases/tag/0.2.2",
+    download_url="https://github.com/Gaoshengyue/PyDto/releases/tag/0.2.3",
     keywords=["dto,DTO,Dto,PyDto,pydto,PyDto"],
     license="MIT",
     classifiers=[
