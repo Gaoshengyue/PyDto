@@ -18,8 +18,8 @@ setup(
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Intended Audience :: DeveLopers",
-        "Operationg System :: OS Independent"
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent"
 
     ]
 )
