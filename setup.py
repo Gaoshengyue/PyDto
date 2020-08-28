@@ -7,7 +7,7 @@ setup(
     packages=["PyDto"],
     version="0.1.10",
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/plain",
     author="Symoon",
     author_email="symoon.gao@gmail.com",
     url="https://github.com/Gaoshengyue/PyDto",
