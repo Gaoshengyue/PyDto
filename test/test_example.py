@@ -1,6 +1,4 @@
 from PyDto.pydto import PyDtoBase
-
-
 class now_t():
     pp="here is now_t"
     f_list=[1,2,3,4]
