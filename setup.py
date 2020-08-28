@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name="PyDto",
     packages=["PyDto"],
-    version="0.1.4",
+    version="0.1.5",
     author="Symoon",
     author_email="symoon.gao@gmail.com",
     url="https://github.com/Gaoshengyue/PyDto",
