@@ -1,15 +1,14 @@
-
 class PyDtoBase():
     obj_dict = {}
 
-    def __init__(self, obj: object, data_mode=None,deep_keep_alive=3):
+    def __init__(self, obj: object, data_mode=None, deep_keep_alive=3):
         """
         :data_mode:sqlalchemy，默认为None，sqlalchemy模式下启动解析schema结构
         :param obj: 传递需要进行数据结构筛选的对象
         """
         self.obj_demo = obj
         self.data_mode = data_mode
-        self.deep_keep_alive=deep_keep_alive
+        self.deep_keep_alive = deep_keep_alive
 
     def MakeDataSchema(cls):
         """
@@ -87,7 +86,7 @@ class PyDtoBase():
                                                                 k_type.__dict__.get("__annotations__"))
                         else:
                             s_r_dict[key_name] = self.todict(item.__getattribute__(key_name))
-                    result.append(s_r_dict)
+                result.append(s_r_dict)
 
         elif type(obj) == dict:
             for key_name, k_type in obj_dict_class.items():
