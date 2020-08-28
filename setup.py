@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name="python-dto",
-    packages=["python-dto"],
+    packages=["PyDto"],
     version="0.1.7",
     author="Symoon",
     author_email="symoon.gao@gmail.com",
