@@ -67,13 +67,20 @@ class PyDtoBase():
         """
         result = {}
         if type(obj) != dict and not hasattr(obj, "__iter__"):
+            print(obj.__getattribute__("is_delete"))
             for key_name, k_type in obj_dict_class.items():
                 if obj.__getattribute__(key_name):
+                    print(key_name)
                     if k_type.__dict__.get("__annotations__") and self.data_mode == "sqlalchemy":
                         result[key_name] = self.MapSchema(obj.__getattribute__(key_name),
                                                           k_type.__dict__.get("__annotations__"))
                     else:
+                        # print(key_name)
                         result[key_name] = self.todict(obj.__getattribute__(key_name))
+                elif type(obj.__getattribute__(key_name)) ==bool:
+                    result[key_name]=False
+                else:
+                    result[key_name]=None
 
         elif hasattr(obj, "__iter__") and type(obj) not in [str, int, float, dict]:
             result = []
@@ -108,4 +115,5 @@ class PyDtoBase():
 
             return self.MapSchema(self.obj_demo, obj_dict)
         except Exception as e:
+            print(e)
             return e
