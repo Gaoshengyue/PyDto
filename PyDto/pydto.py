@@ -80,7 +80,6 @@ class PyDtoBase():
             for item in obj:
                 s_r_dict = {}
                 for key_name, k_type in obj_dict_class.items():
-                    print(item)
                     if item.__getattribute__(key_name):
                         if k_type.__dict__.get("__annotations__") and self.data_mode == "sqlalchemy":
                             s_r_dict[key_name] = self.MapSchema(item.__getattribute__(key_name),
