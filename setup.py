@@ -1,17 +1,17 @@
 from setuptools import setup
 
-with open("README.md") as f:
+with open("README.md",encoding="utf-8") as f:
     long_description=f.read()
 setup(
     name="python-dto",
     packages=["PyDto"],
-    version="0.1.11",
+    version="0.1.12",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Symoon",
     author_email="symoon.gao@gmail.com",
     url="https://github.com/Gaoshengyue/PyDto",
-    download_url="https://github.com/Gaoshengyue/PyDto/releases/tag/0.1.11",
+    download_url="https://github.com/Gaoshengyue/PyDto/releases/tag/0.1.12",
     keywords=["dto,DTO,Dto,PyDto,pydto,PyDto"],
     license="MIT",
     classifiers=[
