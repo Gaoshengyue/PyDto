@@ -10,8 +10,8 @@ setup(
     long_description_content_type="text/markdown",
     author="Symoon",
     author_email="symoon.gao@gmail.com",
-    url="https://github.com/Gaoshengyue/PyDto",
-    download_url="https://github.com/Gaoshengyue/PyDto/releases/tag/0.2.3",
+    url="https://github.com/Programming-With-Love/PyDto",
+    download_url="https://github.com/Programming-With-Love/PyDto/releases/tag/0.2.3",
     keywords=["dto,DTO,Dto,PyDto,pydto,PyDto"],
     license="MIT",
     classifiers=[
